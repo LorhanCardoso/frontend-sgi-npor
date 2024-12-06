@@ -1,0 +1,42 @@
+[
+    { 
+        "id": "1", 
+        "posto_grad": "3° Sargento", 
+        "abrev_posto_grad": "3° Sgt",
+        "nomeCompleto": "Lorhan Cardoso da Paz",
+        "nomeGuerra": "Cardoso", 
+        "funcao": "Monitor" 
+    },
+    { 
+        "id": "2", 
+        "posto_grad": "1° Tenente", 
+        "abrev_posto_grad": "1° Ten",
+        "nomeCompleto": "Eduardo César Nascimento", 
+        "nomeGuerra": "Lopes", 
+        "funcao": "Instrutor" 
+    },
+    { 
+        "id": "3", 
+        "posto_grad": "Capitão", 
+        "abrev_posto_grad": "Cap",
+        "nomeCompleto": "Júlio César Batista", 
+        "nomeGuerra": "Júlio", 
+        "funcao": "Instrutor" 
+    },
+    { 
+        "id": "4", 
+        "posto_grad": "Cabo", 
+        "abrev_posto_grad": "CB",
+        "nomeCompleto": "Fernando dos Santos Vieira", 
+        "nomeGuerra": "Remildo", 
+        "funcao": "Monitor" 
+    },
+    { 
+        "id": "5", 
+        "posto_grad": "3° Sargento", 
+        "abrev_posto_grad": "3° Sgt",
+        "nomeCompleto": "Lucas Henrique da Silva", 
+        "nomeGuerra": "Carvalho", 
+        "funcao": "Monitor" 
+    }
+]

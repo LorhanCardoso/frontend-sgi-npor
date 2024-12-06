@@ -1,0 +1,99 @@
+[
+    {
+      "id": "ig1",
+      "titulo":"IG I",
+      "img":"ig.png",
+      "ac_co":true
+    },
+    {
+      "id": "ig2",
+      "titulo":"IG II",
+      "img":"ig.png",
+      "ac_co":true
+    },
+    {
+      "id": "historimiltiar",
+      "titulo":"HISTÓRIA MILITAR",
+      "img":"historiaMilitar.png",
+      "ac_co":true
+    },
+    {
+      "id": "oeinf1",
+      "titulo":"OEINF I",
+      "img":"oeinf.png",
+      "ac_co":true
+    },
+    {
+      "id": "oeinf2",
+      "titulo":"OEINF II",
+      "img": "oeinf.png",
+      "ac_co":true
+    },
+    {
+      "id": "fuzil",
+      "titulo":"FUZIL",
+      "img": "fuzil.png",
+      "ac_co":true
+    },
+    {
+      "id": "pistola",
+      "titulo":"PISTOLA",
+      "img": "pistola.png",
+      "ac_co":true
+    },
+    {
+      "id": "comunicacoes",
+      "titulo":"COMUNICAÇÕES",
+      "img": "comunicacoes.png",
+      "ac_co":true
+    },
+    {
+      "id": "explosivomilitar",
+      "titulo":"EXPLOSIVO MILITAR",
+      "img": "explosivoMilitar.png",
+      "ac_co":true
+    },
+    {
+      "id": "topografia",
+      "titulo":"TOPOGRAFIA",
+      "img": "topografia.png",
+      "ac_co":true
+    },
+    {
+      "id": "cmbsvcmp2",
+      "titulo":"CMB SV CMP II",
+      "img": "cmbSvCmp.png",
+      "ac_co":true
+    },
+    {
+      "id": "patrulha2",
+      "titulo":"PATRULHA II",
+      "img": "patrulha.png",
+      "ac_co":true
+    },
+    {
+      "id": "tafcomum",
+      "titulo":"TAF(COMUM)",
+      "img": "taf.png",
+      "ac_co":false
+    },
+    {
+      "id": "tafpfa",
+      "titulo":"TAF(PFA)",
+      "img": "taf.png",
+      "ac_co":false
+    },
+    {
+      "id": "conceito",
+      "titulo":"CONCEITO",
+      "img": "conceito.png",
+      "ac_co":false
+    },
+    {
+      "id": "pid",
+      "titulo":"PID",
+      "img": "pid.png",
+      "ac_co":false
+    }
+  ]
+  

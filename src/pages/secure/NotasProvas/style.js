@@ -27,7 +27,7 @@ export const ToggleContainer = styled.div`
   border-radius: 100px;
   justify-content: center;
   align-items: center;
-  margin-bottom: 20px;
+  margin-bottom: 5px;
 
   @media (max-width: 1025px) {
     max-width: 258px;

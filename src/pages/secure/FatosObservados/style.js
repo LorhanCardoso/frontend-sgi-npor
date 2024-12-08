@@ -119,12 +119,12 @@ export const BoxContainer = styled.div`
 
   &.boxTabela {
     border-radius: 10px;
-    padding: 5px;
-    padding-top: 10px;
+    padding: 10px;
     border: 1px solid ${props => props.$backgroundcolor};
     align-items: start;
     background-color: white;
-    height: 85%;
+    height: 60vh;
+    overflow: hidden;
   }
 
   &.boxOpcoesTabela {

@@ -10,16 +10,16 @@ const StyledTable = styled.table`
 
 
     th, td {
-      padding: 7px 15px;
+      padding: 7px 20px;
       border: 1px solid #c6c9cf;
       border-left: none; 
-      border-right: none; 
+      border-right: none;
 
-      /* Adicione as propriedades abaixo para truncar o texto */
-      white-space: nowrap; /* Impede quebra de linha */
-      overflow: hidden; /* Esconde o texto que ultrapassa o limite */
-      text-overflow: ellipsis; /* Adiciona as reticências (...) */
-      max-width: 400px; /* Defina um limite de largura apropriado */
+     
+      white-space: nowrap; 
+      overflow: hidden; 
+      text-overflow: ellipsis; 
+      max-width: 400px;
     }
 
     th {
@@ -40,30 +40,31 @@ const StyledTable = styled.table`
 `;
 
 const StyledTableContainer = styled.div`
-    width: 98%;
-    max-height: 265px; /* Define uma altura máxima para o scroll */
-    overflow-y: auto; /* Adiciona barra de rolagem vertical */
+    width: 100%;
+    height: 95%; /* Ocupa toda a altura do BoxContainer */
+    max-height: 100%; /* Garante que não ultrapasse a altura do BoxContainer */
+    overflow-y: auto; /* Adiciona barra de rolagem vertical se necessário */
     border-radius: 10px;
-
-    /* Adicionando o estilo para desabilitar a tabela */
+    
     &.disabled {
-        pointer-events: none; /* Desativa a interação com os itens dentro da tabela */
-        opacity: 0.5; /* Diminui a opacidade para dar uma aparência desativada */
+        pointer-events: none;
+        opacity: 0.5;
     }
 
     &::-webkit-scrollbar {
-        width: 6px; /* Largura da barra de rolagem */
+        width: 6px;
     }
 
     &::-webkit-scrollbar-thumb {
-        background-color: #969696; /* Cor da barra */
+        background-color: #969696;
         border-radius: 5px;
     }
 
     &::-webkit-scrollbar-thumb:hover {
-        background-color: #676d7c; /* Cor ao passar o mouse */
+        background-color: #676d7c;
     }
 `;
+
 
 const Table = ({ data, columns, onRowClick, isDisabled }) => {
     return (
@@ -81,10 +82,10 @@ const Table = ({ data, columns, onRowClick, isDisabled }) => {
               <tr
                 key={`row-${rowIndex}`}
                 onClick={() => onRowClick(row)} // Captura o clique na linha
-                style={{ cursor: 'pointer' }} // Estilização para indicar que é clicável
+                style={{ cursor: 'pointer'}} // Estilização para indicar que é clicável
               >
                 {columns.map((column, colIndex) => (
-                  <td key={`col-${colIndex}`} title={column.render ? column.render(row) : row[column.accessor]}>
+                  <td key={`col-${colIndex}`}>
                     {column.render ? column.render(row) : row[column.accessor]}
                   </td>
                 ))}

@@ -412,20 +412,23 @@ const FatosObservados = (props) => {
 
               {modularState.opcoesTabela && (
                 <S.BoxContainer className="boxOpcoesTabela mobile">
-                    <BotaoAcaoTabela 
-                      icon={MdOutlineEdit} 
-                      texto="Editar" 
-                      onClick={handleEditarDados} />
+                  <BotaoAcaoTabela 
+                    icon={MdOutlineEdit} 
+                    texto="Editar" 
+                    onClick={handleEditarDados} 
+                  />
 
-                    <BotaoAcaoTabela 
-                      icon={BsPrinter} 
-                      texto="Imprimir"/>
-                      
-                    <BotaoAcaoTabela 
-                      icon={RiDeleteBinLine} 
-                      texto="Excluir" 
-                      backgroundColor={props => props.theme.color.red} />
-                      onClick={handleExcluirDados}
+                  <BotaoAcaoTabela 
+                    icon={BsPrinter} 
+                    texto="Imprimir"
+                  />
+                    
+                  <BotaoAcaoTabela 
+                    icon={RiDeleteBinLine} 
+                    texto="Excluir" 
+                    backgroundColor={props => props.theme.color.red} 
+                    onClick={handleExcluirDados}
+                  />
                 </S.BoxContainer>
               )}
             </S.BoxContainer>
@@ -471,6 +474,7 @@ const FatosObservados = (props) => {
           <S.Texto className='textoModular'>Selecione um FO na tabela</S.Texto>
         )}
       </S.BoxContainer>
+      
     </S.BoxContainer>
   );
 };

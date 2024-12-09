@@ -106,28 +106,6 @@ export const BoxContainer = styled.div`
     overflow: hidden;
 }
 
-&.boxOrdernar {
-    width: 30%;
-    height: 50px;
-    gap: 10px;
-    border-radius: 70px;
-    padding: 5px;
-    flex-direction: row;
-    background-color: ${props => props.theme.color.primary};
-
-    @media (max-width: 1024px) {
-        width: 70%;
-        height: 35px;
-    }
-}
-
-&.boxBotoesOrdenar {
-    background-color: #424242;
-    border-radius: 70px;
-    gap: 10px;
-    padding: 5px;
-}
-
 &.boxResponsivo {
     justify-content: space-around;
     display: none;
@@ -205,16 +183,6 @@ export const Botao = styled.button`
     height: 30px;
     width: auto;
     min-width: 50px;
-}
-
-&.botaoOrdenar {
-    color: ${props => props.theme.color.primary};
-    font-family: 'Poppins-Regular';
-
-    @media (max-width: 1024px) {
-        height: 20px;
-        width: 100%;
-    }
 }
 
 &.botaoVoltar,

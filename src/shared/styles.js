@@ -44,11 +44,14 @@ export const BoxContainer = styled.div`
   width: ${props => props.$width || '100%'};
   background-color: ${props => props.$backgroundColor || 'transparent'};
   padding: ${props => props.$padding || '0px'};
+  padding-left: ${props => props.$paddingLeft || '0px'};
+  padding-right: ${props => props.$paddingRight || '0px'};
   gap: ${props => props.$gap || '0px'};
-  flex: ${props => props.$flex || '1'};
   border-radius: ${props => props.$borderRadius || '0px'};
   margin: ${props => props.$margin || '0px'};
   margin-bottom: ${props => props.$marginBottom || ''};
+  border: ${props => props.$border || ''};
+  border-color: ${ props => props.theme.color.primary };
   
   /* Responsividade para telas menores */
   @media (max-width: 1024px) {
@@ -62,5 +65,31 @@ export const BoxContainer = styled.div`
   }
 `;
 
+export const Botao = styled.button`
+  border-radius: 70px;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3px;
+  font-family: 'Poppins-Bold';
+  color: ${ props => props.theme.color.primary };
+  background-color: ${props => props.$backgroundcolor || 'white'};
+  width: ${props => props.$width || '100%'};
+  height: ${props => props.$height || '40px'};
 
+  &:hover {
+      opacity: 0.9;
+  }
+  & span {
+      @media (max-width: 556px) {
+          display: none;
+      }
+  }
 
+  @media (max-width: 768px) {
+      height: 30px;
+      width: auto;
+      min-width: 50px;
+  }
+`;

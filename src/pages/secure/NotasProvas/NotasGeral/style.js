@@ -7,6 +7,8 @@ export const Container = styled.div`
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    gap: 5px;
+    margin-top: 10px;
 
     @media (max-width: 768px) {
         flex-direction: column; 
@@ -25,8 +27,8 @@ export const BoxContainer = styled.div`
     justify-content: center;
 
     &.boxOrdenar{
-        width: 40%;
-        height: 6vh;
+        width: 30%;
+        height: 50px;
         gap: 10px;
         border-radius: 70px;
         padding: 7px;
@@ -47,6 +49,9 @@ export const BoxContainer = styled.div`
         margin-top: 0.5%;
         background-color: none;
         height: 72vh;
+        border: 1px solid ${props => props.theme.color.primary};
+        border-radius: 50px;
+        padding: 10px;
     }
     
 
@@ -78,4 +83,6 @@ export const Text = styled.a`
     font-weight: bold;
     font-family: 'Prompt-Bold';
 `;
+
+
 

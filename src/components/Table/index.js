@@ -41,9 +41,9 @@ const StyledTable = styled.table`
 
 const StyledTableContainer = styled.div`
     width: 100%;
-    height: 95%; /* Ocupa toda a altura do BoxContainer */
-    max-height: 100%; /* Garante que não ultrapasse a altura do BoxContainer */
-    overflow-y: auto; /* Adiciona barra de rolagem vertical se necessário */
+    height: 95%; 
+    max-height: 100%; 
+    overflow-y: auto;
     border-radius: 10px;
     
     &.disabled {
@@ -81,8 +81,8 @@ const Table = ({ data, columns, onRowClick, isDisabled }) => {
             {data.map((row, rowIndex) => (
               <tr
                 key={`row-${rowIndex}`}
-                onClick={() => onRowClick(row)} // Captura o clique na linha
-                style={{ cursor: 'pointer'}} // Estilização para indicar que é clicável
+                onClick={() => onRowClick(row)} 
+                style={{ cursor: 'pointer'}}
               >
                 {columns.map((column, colIndex) => (
                   <td key={`col-${colIndex}`}>

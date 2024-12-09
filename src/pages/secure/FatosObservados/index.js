@@ -70,6 +70,7 @@ const FatosObservados = (props) => {
   });
 
   const [inputPesquisa, setInputPesquisa] = useState("");
+
   const [modularState, setModularState] = useState({
     titulo: "",
     exibir: false,
@@ -135,6 +136,7 @@ const FatosObservados = (props) => {
       instrutorID: row.instrutorID,
       relatoFo: row.relatoFato,
     });
+
   }, []);
 
   const handleLancarFo = useCallback(() => {
@@ -179,10 +181,6 @@ const FatosObservados = (props) => {
       return;
     }
 
-    //const nrAluno = "00";
-    //const aluno = "Aluno";
-    //const instrutor = "Militar Tal";
-
     const resolveAfter3Sec = new Promise(resolve => setTimeout(resolve, 3000));
 
     if (modularState.selectedData) {
@@ -209,22 +207,29 @@ const FatosObservados = (props) => {
         theme: "colored",
       }
     )
-    
-    //setFeedbackMessage(modularState.selectedData ? "Fato observado atualizado com sucesso!" : "Fato observado lançado com sucesso!");
-    
-    setModularState({ ...modularState, exibir: false, editar: false, selectedData: null, lancar: false });
 
-    zerarFormData();
+    setModularState((prevState) => ({
+      ...prevState,
+      editar: false,
+      opcoesTabela: true,
+      titulo: `FATO OBSERVADO N°${prevState.selectedData.id}`,
+      lancar: false,
+      
+    }));
 
-  }, [formData, modularState, zerarFormData]);
+  }, [formData, modularState]);
 
   const handleExcluirDados = useCallback(() => {
     if (!modularState.selectedData) return;
 
-    //setFeedbackMessage("Fato observado excluído com sucesso!");
-    setModularState({ ...modularState, exibir: false, editar: false, selectedData: null, lancar: false });
-
-    //setShow(true);
+    setModularState({ 
+      ...modularState, 
+      exibir: false, 
+      editar: false, 
+      selectedData: null, 
+      lancar: false, 
+      titulo: ""
+    });
     
     zerarFormData();
   }, [modularState, zerarFormData]);

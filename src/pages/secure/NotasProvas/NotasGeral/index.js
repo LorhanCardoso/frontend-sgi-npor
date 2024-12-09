@@ -1,7 +1,13 @@
 import React from 'react';
 import * as S from './style';
 
-import { FcPrint, FcComboChart, FcGenericSortingAsc, FcGenericSortingDesc } from "react-icons/fc";
+import { FcPrint, 
+    FcComboChart, 
+    FcGenericSortingAsc, 
+    FcGenericSortingDesc 
+} from "react-icons/fc";
+
+import TabsContainer from '../../../../components/TabsContainer';
 
 const NotasGeral = (props) => {
     
@@ -14,6 +20,7 @@ const NotasGeral = (props) => {
 
     return (
        <S.Container>
+            <TabsContainer />
             <S.BoxContainer className='boxOrdenar'>
                 <S.Text color="white">Ordernar</S.Text>
                 <S.BoxContainer className='botoesOrdenar'>
@@ -22,10 +29,6 @@ const NotasGeral = (props) => {
                     <BotaoAcao icon={FcGenericSortingAsc} texto="Menores" />
                 </S.BoxContainer>
                 <BotaoAcao width="30%" icon={FcPrint} texto="Imprimir" />
-            </S.BoxContainer>
-
-            <S.BoxContainer className='boxTabela'>
-                Lista de notas
             </S.BoxContainer>
        </S.Container>
     );

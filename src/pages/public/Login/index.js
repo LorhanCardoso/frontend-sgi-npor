@@ -9,7 +9,7 @@ const Login = () => {
 
     const handleLogin = () => {
         // Aqui você pode adicionar validações, se necessário
-        navigate('/'); // Redireciona para a tela de Dashboard
+        navigate('/dashboard'); // Redireciona para a tela de Dashboard
     };
 
     return (

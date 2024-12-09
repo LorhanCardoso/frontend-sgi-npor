@@ -15,7 +15,7 @@ export default function Routes(){
         <Router>
             <AppRoutes>
                 <Route path="/login" element={<Login />} />
-                <Route path="/*" element={<Dashboard />} />
+                <Route path="/*" element={<Login />} />
                 <Route path="/notas" element={<NotaIndividual />} />
                 <Route path="/fatos-observados" element={<FatosObservados />} />
                 <Route path="/administracao" element={<Adimistrador />} />

@@ -49,6 +49,7 @@ export const BoxContainer = styled.div`
                 height: 80%;
                 background-color: white;
                 border-radius: 50px 50px 0px 0px;
+                justify-content: start;
             }
         }
     }
@@ -151,11 +152,18 @@ export const BoxContainer = styled.div`
         flex-direction: column;
         justify-content: space-around;
         border: 1px solid ${props => props.theme.color.primary};
-        height: 100%;
+        height: 90%;
         padding: 10px;
+        gap: 5px;
+
+        @media (max-width: 1024px) {
+            width: 96%;
+            height: 320px;
+        }
 
         @media (max-width: 500px) {
             width: 96%;
+            height: 250px;
         }
     }
 

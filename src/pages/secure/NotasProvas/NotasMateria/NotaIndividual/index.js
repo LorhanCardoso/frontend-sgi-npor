@@ -225,7 +225,20 @@ const NotasIndividual = ({ titulo, img, tipo, onBack, materiaId }) => {
             />
           </S.BoxContainer>
         </S.BoxContainer>
+        
         <S.BoxContainer className={`boxModular ${exibiModular ? 'exibir' : ''}`}>
+        {exibiModular &&
+            <S.BoxContainer className='boxBtFechar'>
+              <S.Botao
+                $backgroundcolor={props => props.theme.color.red}
+                className='botaoFecharResponsivo'
+                onClick={handleModular}
+              >
+                <IoIosCloseCircleOutline size={12} />
+                Fechar
+              </S.Botao>
+            </S.BoxContainer>
+          }
           <S.BoxContainer className='boxExpeciais'>
             <S.BoxContainer className='boxTitulo'>
               <FcStatistics />
@@ -249,19 +262,6 @@ const NotasIndividual = ({ titulo, img, tipo, onBack, materiaId }) => {
               columns={columnsTableMencoes}
             />
           </S.BoxContainer>
-
-          {exibiModular &&
-            <S.BoxContainer className='boxBtFechar'>
-              <S.Botao
-                $backgroundcolor={props => props.theme.color.red}
-                className='botaoFecharResponsivo'
-                onClick={handleModular}
-              >
-                <IoIosCloseCircleOutline size={12} />
-                Fechar
-              </S.Botao>
-            </S.BoxContainer>
-          }
         </S.BoxContainer>
       </S.BoxContainer>
       <BoxOrdernar 

@@ -4,7 +4,7 @@ import styled from 'styled-components';
 
 const StyledSelect = styled.select`
     width: 100%;
-    height: 40px;
+    height: 35px;
     padding: 10px;
     font-size: 10px;
     font-family: 'Poppins-Regular';

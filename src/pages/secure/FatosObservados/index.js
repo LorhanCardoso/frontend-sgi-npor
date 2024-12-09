@@ -237,9 +237,8 @@ const FatosObservados = (props) => {
   return (
     <S.BoxContainer className='boxGeral'>
 
-      <ToastContainer />
-
       <S.BoxContainer className='boxInfo'>
+      <ToastContainer />
         
         <S.BoxContainer className='boxTopInfo'>
           <S.BoxContainer className='boxAprentacaoTopInfo'>

@@ -18,7 +18,6 @@ export const BoxContainer = styled.div`
     width: 98%;
     height: 85vh;
     gap: 20px;
-    
   }
 
   &.boxInfo {
@@ -125,6 +124,10 @@ export const BoxContainer = styled.div`
     background-color: white;
     height: 60vh;
     overflow: hidden;
+
+    @media (max-width: 1280px) {
+      height: 55vh;
+    }
   }
 
   &.boxOpcoesTabela {

@@ -61,9 +61,10 @@ const Administrador = (props) => {
                 $backgroundColor={ props => props.theme.color.primary }
                 $height="60px"
                 $borderRadius="50px"
-                $width="99%"
+                $width="90%"
+                $justifyContent="space-between"
             >
-                <BoxContainer $gap="8px" $justifyContent="start" $paddingLeft="10px">
+                <BoxContainer $gap="10px" $width="auto" $paddingLeft="10px">
                     <S.CircleIcon $backgroundcolor="#dadcde">
                         <FcPrivacy size={20}/>
                     </S.CircleIcon>
@@ -73,7 +74,7 @@ const Administrador = (props) => {
                     </S.TextoBox>
                 </BoxContainer> 
 
-                <BoxContainer $gap="10px" $justifyContent="end" $paddingRight="10px">
+                <BoxContainer $gap="10px" $width="auto" $paddingRight="10px">
                     <Botao $width="120px">
                         <FcDataConfiguration />
                         Alunos

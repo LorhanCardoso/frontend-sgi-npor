@@ -52,17 +52,6 @@ export const BoxContainer = styled.div`
   margin-bottom: ${props => props.$marginBottom || ''};
   border: ${props => props.$border || ''};
   border-color: ${ props => props.theme.color.primary };
-  
-  /* Responsividade para telas menores */
-  @media (max-width: 1024px) {
-    flex-direction: ${props => props.$responsiveDirection || props.$flexDirection || 'row'};
-    padding: ${props => props.$responsivePadding || props.$padding || '0px'};
-  }
-
-  /* Outras media queries conforme necessário */
-  @media (max-width: 450px) {
-    flex-direction: ${props => props.$responsiveDirectionSmall || props.$flexDirection || 'row'};
-  }
 `;
 
 export const Botao = styled.button`

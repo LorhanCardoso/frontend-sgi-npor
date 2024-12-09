@@ -226,17 +226,6 @@ const NotasIndividual = ({ titulo, img, tipo, onBack, materiaId }) => {
           </S.BoxContainer>
         </S.BoxContainer>
         <S.BoxContainer className={`boxModular ${exibiModular ? 'exibir' : ''}`}>
-          {exibiModular &&
-            <S.Botao
-              $backgroundcolor={props => props.theme.color.red}
-              $width="70px"
-              $height='60px'
-              onClick={handleModular}
-            >
-              <IoIosCloseCircleOutline size={10} />
-              Fechar
-            </S.Botao>
-          }
           <S.BoxContainer className='boxExpeciais'>
             <S.BoxContainer className='boxTitulo'>
               <FcStatistics />
@@ -247,7 +236,7 @@ const NotasIndividual = ({ titulo, img, tipo, onBack, materiaId }) => {
               data={quantidadeMencoes}
               options={{ title: "Gráfico de Menções", backgroundColor: "none" }}
               width={"100%"}
-              height={"230px"}
+              height={"220px"}
             />
           </S.BoxContainer>
           <S.BoxContainer className='boxExpeciais'>
@@ -260,6 +249,19 @@ const NotasIndividual = ({ titulo, img, tipo, onBack, materiaId }) => {
               columns={columnsTableMencoes}
             />
           </S.BoxContainer>
+
+          {exibiModular &&
+            <S.BoxContainer className='boxBtFechar'>
+              <S.Botao
+                $backgroundcolor={props => props.theme.color.red}
+                className='botaoFecharResponsivo'
+                onClick={handleModular}
+              >
+                <IoIosCloseCircleOutline size={12} />
+                Fechar
+              </S.Botao>
+            </S.BoxContainer>
+          }
         </S.BoxContainer>
       </S.BoxContainer>
       <BoxOrdernar 

@@ -8,7 +8,7 @@ const theme = {
       gray: '#676d7c'
     },
     font: {
-      titulo: 'Prompt-ExtraBold',
+      titulo: 'Prompt-Bold',
       title: 'Poppins-Bold',
       regular: 'Poppins-Regular',
     }

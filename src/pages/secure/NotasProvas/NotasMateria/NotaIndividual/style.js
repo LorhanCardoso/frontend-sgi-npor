@@ -48,110 +48,122 @@ export const BoxContainer = styled.div`
                 width: 100%;
                 height: 80%;
                 background-color: white;
+                border-radius: 50px 50px 0px 0px;
             }
         }
     }
 
-&.boxBotoes {
-    padding: 5px 10px;
-    gap: 10px;
-    border-radius: 70px;
-    justify-content: space-between;
-    background-color: ${props => props.theme.color.primary};
-    width: 90%;
+    &.boxBotoes {
+        padding: 5px 10px;
+        gap: 10px;
+        border-radius: 70px;
+        justify-content: space-between;
+        background-color: ${props => props.theme.color.primary};
+        width: 90%;
 
-    @media (max-width: 1024px) {
-        height: 65px;
+        @media (max-width: 1024px) {
+            height: 50px;
+        }
     }
-}
 
-&.identificacaoMateria {
-    gap: 5px;
-    width: auto;
-}
-
-&.botoesAcoesProva {
-    height: 50px;
-    width: 280px;
-    gap: 10px;
-    padding: 5px;
-    display: none;
-
-    @media (max-width: 1280px) {
-        display: flex;
+    &.identificacaoMateria {
+        gap: 5px;
+        width: auto;
     }
-}
 
-&.boxImprimir {
-    border-radius: 70px;
-    gap: 10px;
-    border: 1px solid white;
-    padding: 5px;
-    width: 250px;
-    height: 50px;
-
-    @media (max-width: 1024px) {
+    &.botoesAcoesProva {
+        height: 50px;
+        width: 280px;
+        gap: 10px;
+        padding: 5px;
         display: none;
+
+        @media (max-width: 1280px) {
+            display: flex;
+        }
     }
-}
 
-&.boxNomeImprimir {
-    flex-direction: column;
-    width: 75%;
-}
+    &.boxImprimir {
+        border-radius: 70px;
+        gap: 10px;
+        border: 1px solid white;
+        padding: 5px;
+        width: 250px;
+        height: 50px;
 
-&.boxTabela {
-    height: 65vh;
-    padding: 10px;
-    overflow: hidden;
-}
-
-&.boxResponsivo {
-    justify-content: space-around;
-    display: none;
-
-    @media (max-width: 1024px) {
-        display: flex;
+        @media (max-width: 1024px) {
+            display: none;
+        }
     }
-}
 
-&.boxImprimirResponsivo {
-    border-radius: 70px;
-    gap: 10px;
-    background-color: ${props => props.theme.color.primary};
-    padding: 5px;
-    width: 180px;
-    height: 35px;
-    margin-top: 1%;
-
-    @media (max-width: 1024px) {
-        display: flex;
+    &.boxNomeImprimir {
+        flex-direction: column;
+        width: 75%;
     }
-}
 
-&.boxBotaoVoltarResponsivo {
-    background-color: ${props => props.theme.color.primary};
-    width: auto;
-    height: auto;
-    padding: 5px;
-    border-radius: 70px;
-    margin-top: 1%;
-}
+    &.boxTabela {
+        height: 65vh;
+        padding: 10px;
+        overflow: hidden;
+    }
 
-&.boxTitulo {
-    padding: 5px;
-    gap: 5px;
-    border-radius: 70px;
-    background-color: ${props => props.theme.color.primary};
-    width: 100px;
-}
+    &.boxResponsivo {
+        justify-content: space-around;
+        display: none;
 
-&.boxExpeciais {
-    flex-direction: column;
-    justify-content: space-around;
-    border: 1px solid ${props => props.theme.color.primary};
-    height: 100%;
-}
+        @media (max-width: 1024px) {
+            display: flex;
+        }
+    }
+
+    &.boxImprimirResponsivo {
+        border-radius: 70px;
+        gap: 10px;
+        background-color: ${props => props.theme.color.primary};
+        padding: 5px;
+        width: 180px;
+        height: 35px;
+        margin-top: 1%;
+
+        @media (max-width: 1024px) {
+            display: flex;
+        }
+    }
+
+    &.boxBotaoVoltarResponsivo {
+        background-color: ${props => props.theme.color.primary};
+        width: auto;
+        height: auto;
+        padding: 5px;
+        border-radius: 70px;
+        margin-top: 1%;
+    }
+
+    &.boxTitulo {
+        padding: 5px;
+        gap: 5px;
+        border-radius: 70px;
+        background-color: ${props => props.theme.color.primary};
+        width: 100px;
+    }
+
+    &.boxExpeciais {
+        flex-direction: column;
+        justify-content: space-around;
+        border: 1px solid ${props => props.theme.color.primary};
+        height: 100%;
+        padding: 10px;
+
+        @media (max-width: 500px) {
+            width: 96%;
+        }
+    }
+
+    &.boxBtFechar {
+        width: 95%;
+        height: 50px;
+        justify-content: center;
+    }
 `;
 
 const commonButtonStyles = `
@@ -179,35 +191,47 @@ export const Botao = styled.button`
     width: ${props => props.$width || '100%'};
     height: ${props => props.$height || '35px'};
 
-@media (max-width: 768px) {
-    height: 30px;
-    width: auto;
-    min-width: 50px;
-}
+    @media (max-width: 768px) {
+        height: 30px;
+        width: 90px;
+        min-width: 50px;
+    }
 
-&.botaoVoltar,
-&.botaoVoltarResponsivo {
-    color: ${props => props.theme.color.primary};
+    &.botaoVoltar,
+    &.botaoVoltarResponsivo {
+        color: ${props => props.theme.color.primary};
 
-    @media (max-width: 1024px) {
-        &.botaoVoltar {
-            height: 20px;
-            display: none;
-        }
+        @media (max-width: 1024px) {
+            &.botaoVoltar {
+                height: 20px;
+                display: none;
+            }
 
-        &.botaoVoltarResponsivo {
-            height: 28px;
+            &.botaoVoltarResponsivo {
+                height: 28px;
+            }
         }
     }
-}
 
-&.botoesImpressao {
-    background-color: ${props => props.theme.color.secondary};
+    &.botoesImpressao {
+        background-color: ${props => props.theme.color.secondary};
 
-    @media (max-width: 1024px) {
-        height: 100%;
+        @media (max-width: 1024px) {
+            height: 100%;
+        }
     }
-}
+
+    &.botaoFecharResponsivo {
+        width: 65px;
+        height: 25px;
+        padding: 5px;
+
+        @media (max-width: 768px) {
+            width: 65px;
+            height: 25px;
+            min-width: 25px;
+        }
+    }
 `;
 
 export const Texto = styled.p`
@@ -242,6 +266,12 @@ export const CircleIcon = styled.span`
     display: flex;
     justify-content: center;
     align-items: center;
+
+    @media (max-width: 1024px) {
+        width: 36px;
+        height: 36px;
+    }
+
 `;
 
 export const TextoBox = styled.div`

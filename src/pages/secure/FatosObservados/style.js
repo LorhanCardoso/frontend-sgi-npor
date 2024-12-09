@@ -76,6 +76,7 @@ export const BoxContainer = styled.div`
         width: 100%;
         height: 80%;
         background-color: white;
+        border-radius: 50px 50px 0px 0px;
       }
     }
   }
@@ -92,6 +93,10 @@ export const BoxContainer = styled.div`
     width: 120px;
     justify-content: space-around;
     border-radius: 20px;
+
+    @media (max-width: 450px) {
+      width: 100px;
+    }
   }
 
   &.boxNomeQtFos {
@@ -287,7 +292,7 @@ export const Texto = styled.p`
     props.$variant === 'fatosObservados' &&
     `
     font-size: 2.5rem;
-    font-family: 'Prompt-Black';
+    font-family: 'Prompt-Bold';
     line-height: 1;
   `}
 
@@ -295,7 +300,7 @@ export const Texto = styled.p`
     props.$variant === 'qtFos' &&
     `
     font-size: 3.5rem;
-    font-family: 'Prompt-Black';
+    font-family: 'Prompt-Bold';
     line-height: 1;
   `}
 

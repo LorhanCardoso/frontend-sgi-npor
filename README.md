@@ -1,70 +1,146 @@
-# Getting Started with Create React App
+# Sistema de Administração de Usuários
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![React](https://img.shields.io/badge/React-18-blue?logo=react) ![Styled Components](https://img.shields.io/badge/Styled--Components-5.3.11-DB7093?logo=styled-components) ![JavaScript](https://img.shields.io/badge/JavaScript-ES6-yellow?logo=javascript)
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## Tabela de Conteúdos
 
-### `npm start`
+* [Descrição](#descrição)
+* [Funcionalidades](#funcionalidades)
+* [Tecnologias Utilizadas](#tecnologias-utilizadas)
+* [Estrutura do Projeto](#estrutura-do-projeto)
+* [Componentes Principais](#componentes-principais)
+* [Como Usar](#como-usar)
+* [Observações](#observações)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Descrição
 
-### `npm test`
+Este projeto é uma aplicação **React** voltada para **administração de usuários** e gerenciamento de dados de instrutores e alunos.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Permite **visualizar, cadastrar, editar e remover usuários**, além de **gerenciar fotos de perfil** de cada aluno ou instrutor.
 
-### `npm run build`
+A aplicação utiliza **componentes modulares**, **styled-components**, e manipulação de formulários com **React Hooks** (`useState`, `useMemo`, `useCallback`).
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Funcionalidades
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. **Visualização de dados**
 
-### `npm run eject`
+   * Exibe listas de alunos e instrutores.
+   * Modal com detalhes do usuário ao clicar na linha da tabela.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+2. **Cadastro e edição**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+   * Criação e edição de usuários.
+   * Campos de formulário:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+     * Posto/Graduação
+     * Nome completo
+     * Nome de guerra
+     * Função
+     * Designação
+     * Nível de acesso
+     * Usuário e senha
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+3. **Gerenciamento de fotos**
 
-## Learn More
+   * Upload de foto de perfil.
+   * Botões:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+     * `Escolher Foto` / `Escolher Nova Foto`
+     * `Remover Foto de Perfil`
+   * Fotos exibidas no modal em **CircleIcon**.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+4. **Modais**
 
-### Code Splitting
+   * Formulários de cadastro, edição e visualização.
+   * Controle via `modalState` no React.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+5. **Filtros e busca**
 
-### Analyzing the Bundle Size
+   * Pesquisa por posto/graduação.
+   * Atualização dinâmica da lista de usuários.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+6. **Responsividade**
 
-### Making a Progressive Web App
+   * Componentes se adaptam conforme a largura da tela.
+   * Exibição condicional de componentes em telas menores.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+---
 
-### Advanced Configuration
+## Tecnologias Utilizadas
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+* **React** (Hooks: `useState`, `useCallback`, `useMemo`, `useRef`)
+* **Styled-components**
+* **React-icons** (`FcDecision`, `FcDataConfiguration`, `FcContacts`, `FcPrivacy`)
+* **React-Select**
+* **JavaScript ES6+**
+* **CSS-in-JS**
 
-### Deployment
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## Estrutura do Projeto
 
-### `npm run build` fails to minify
+```
+src/
+├── components/
+│   ├── Administrador/
+│   │   ├── index.jsx          # Componente principal de administração
+│   │   ├── style.js           # Estilos específicos
+│   │   ├── Alunos/
+│   │   │   └── index.jsx      # Tela de alunos
+│   │   └── Instrutores/
+│   │       └── index.jsx      # Tela de instrutores
+│   ├── InputField.jsx         # Componente genérico de input
+├── shared/
+│   ├── styles.js              # BoxContainer, Botao, Input, etc.
+├── assets/
+│   └── imagens/               # Fotos de perfil e ícones adicionais
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
+
+## Componentes Principais
+
+* **Administrador**: Componente principal que gerencia cadastro, edição e visualização de usuários.
+* **TelaAlunos**: Lista de alunos com modais para cadastro, edição e visualização.
+* **TelaInstrutores**: Lista de instrutores com modais para cadastro, edição e visualização.
+* **InputField**: Componente reutilizável para inputs de formulário.
+* **CircleIcon**: Componente para exibir foto de perfil ou ícone padrão.
+
+---
+
+## Como Usar
+
+1. **Clonar o repositório**
+
+```bash
+git clone <URL_DO_REPOSITORIO>
+cd <NOME_DO_PROJETO>
+npm install
+```
+
+2. **Executar em desenvolvimento**
+
+```bash
+npm start
+```
+
+3. **Navegação e uso**
+
+   * Clique no botão **Alunos** ou **Eqp Instr** para alternar telas.
+   * Clique em uma linha da tabela para abrir modal com detalhes do usuário.
+   * Clique em **Escolher Foto / Escolher Nova Foto** para alterar foto de perfil.
+   * Clique em **Remover Foto de Perfil** para remover imagem.
+
+---
+
+## Observações
+
+* Cada usuário possui **foto de perfil independente**.
+* O sistema é **responsivo**, mas alguns componentes (como `boxModular`) ainda estão em implementação completa.
+* Senhas são gerenciadas de forma simplificada; para produção, recomenda-se implementar **hash seguro**.
